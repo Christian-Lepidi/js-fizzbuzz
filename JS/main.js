@@ -1,4 +1,6 @@
-for (let i = 1; i <= 100; i++) {
+const cardsRow = document.getElementById("cards-row");
+let contentCard = document.getElementById("content-card");
+/*for (let i = 1; i <= 100; i++) {
   if (i % 15 == 0) {
     console.log("FizzBuzz");
   } else if (i % 3 == 0) {
@@ -8,4 +10,22 @@ for (let i = 1; i <= 100; i++) {
   } else {
     console.log(i);
   }
+}*/
+let result = "";
+for (let i = 1; i <= 100; i++) {
+  if (i % 15 == 0) {
+    result = "FizzBuzz";
+  } else if (i % 3 == 0) {
+    result = "Fizz";
+  } else if (i % 5 == 0) {
+    result = "Buzz";
+  } else {
+    result = i;
+  }
+  cardsRow.innerHTML += `
+    <div class="col-3">
+     <div class="card">
+      <h3>${result}</h3>
+     </div>
+    </div>`;
 }

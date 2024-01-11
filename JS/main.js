@@ -1,28 +1,21 @@
 const cardsRow = document.getElementById("cards-row");
-for (let i = 1; i <= 100; i++) {
-  if (i % 15 == 0) {
-    console.log("FizzBuzz");
-  } else if (i % 3 == 0) {
-    console.log("Fizz");
-  } else if (i % 5 == 0) {
-    console.log("Buzz");
-  } else {
-    console.log(i);
-  }
-}
 let result = "";
 let classe = "";
 for (let i = 1; i <= 100; i++) {
   if (i % 15 == 0) {
+    console.log("FizzBuzz");
     result = "FizzBuzz";
     classe = "red";
   } else if (i % 3 == 0) {
+    console.log("Fizz");
     result = "Fizz";
     classe = "green";
   } else if (i % 5 == 0) {
+    console.log("Buzz");
     result = "Buzz";
     classe = "yellow";
   } else {
+    console.log(i);
     result = i;
     classe = "blue";
   }
